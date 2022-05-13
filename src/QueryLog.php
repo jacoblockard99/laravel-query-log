@@ -50,7 +50,7 @@ class QueryLog
         $this->final = [];
 
         if (!in_array(strtolower($this->format), ['text', 'json'])) {
-            throw new \Exception('Invalid query log data file format. Support text or json file format.');
+            throw new \Exception('Invalid query log data file format. Support text or simple-text or json file format.');
         }
 
         if (file_exists($this->file_path)) {
@@ -99,6 +99,10 @@ class QueryLog
 
             if ($this->format == 'text') {
                 (new TextLogFileWriter)->write($this->file_path, $this->final);
+            }
+
+            if ($this->format == 'simple-text') {
+                (new SimpleTextLogFileWriter)->write($this->file_path, $this->final);
             }
 
         });

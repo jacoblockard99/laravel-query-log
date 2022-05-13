@@ -1,5 +1,5 @@
 {
-    "name": "haruncpi/laravel-query-log",
+    "name": "jll/laravel-query-log",
     "description": "Log your all laravel sql query",
     "license": "cc-by-4.0",
     "authors": [{

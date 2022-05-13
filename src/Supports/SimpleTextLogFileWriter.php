@@ -4,8 +4,6 @@ use Haruncpi\QueryLog\Contracts\FileWritable;
 
 class SimpleTextLogFileWriter implements FileWritable
 {
-    private $file_path;
-
     private $base;
 
     public function __construct()
